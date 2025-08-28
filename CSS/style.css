@@ -1,0 +1,30 @@
+/* body{
+    background-color: aqua;
+} */
+
+/* h1,h2,h3{
+    background-color: brown;
+    color: white;
+} */
+ /* h1{
+    background-color: cadetblue;
+ }
+
+ .heading1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+ } */
+
+ /* div~p{
+    background-color: brown;
+    color: white;
+ } */
+  p:nth-child(2){
+    background-color: blue;
+    color: white;
+  }
+
+  div p:nth-of-type(1){
+    background-color: aqua;
+    font-size: xx-large;
+  }
