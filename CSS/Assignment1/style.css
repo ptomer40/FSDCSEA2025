@@ -1,0 +1,71 @@
+/* body{
+    background-color: aquamarine;
+} */
+ .container{
+    display: grid;
+    /* grid-template-columns: 200px 300px 400px 300px; */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 400px 500px  200px;
+    border: 1px solid red;
+
+ }
+ .child1{
+    border: 1px dotted green;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    /* height: 300px;
+    width: 300px; */
+    background-color: aquamarine;
+
+ }
+.child11{
+ height:100px;
+ width: 100px;
+ border: 1px dotted red;
+ background-color: aquamarine;
+ margin-left: 20px;
+ margin-top: 20px;
+}
+
+.child12{
+    height:100px;
+ width: 100px;
+ margin-top: 20px;
+ border: 1px dotted cyan;
+ background-color: brown;
+}
+
+.child13{
+    height:100px;
+ width: 100px;
+ margin-left: 20px;
+ border: 1px dotted blueviolet;
+ background-color: chartreuse;
+
+}
+.child14{
+  height:100px;
+ width: 100px; 
+ border: 1px dotted rosybrown;
+ background-color: coral; 
+}
+
+ .child2{
+    border: 1px dotted red;
+    /* height: 300px;
+    width: 300px; */
+    background-color: brown;
+ }
+ .child3{
+    border: 1px dotted rgb(64, 0, 128);
+    /* height: 300px;
+    width: 300px; */
+    background-color: chartreuse;
+ }
+ .child4{
+    border: 1px dotted rgb(226, 118, 18);
+    /* height: 300px;
+    width: 300px; */
+    background-color: chocolate;
+ }
