@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Gallery from './component/Gallery'
 import ICard from './component/ICard'
+import Book from './component/Book'
+import StateHandling from './component/StateHandling'
+import ImageManipulation from './component/ImageManipulation'
 
 function App() {
 //   const student=
@@ -42,7 +45,11 @@ function App() {
       <ICard data={ele} />
     ))}
      */}
-     
+     {/* <Book /> */}
+
+     {/* <StateHandling /> */}
+
+     <ImageManipulation />
     </div>
   )
 }
