@@ -26,7 +26,7 @@ const[logData,setlogData]=useState();
      
 
       </BrowserRouter>
-      <h2>{JSON.stringify(logData)}</h2>
+      {/* <h2>{JSON.stringify(logData)}</h2> */}
     </>
   )
 }
