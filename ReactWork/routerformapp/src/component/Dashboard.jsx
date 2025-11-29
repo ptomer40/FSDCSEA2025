@@ -1,21 +1,53 @@
 import React, { useEffect, useState } from 'react'
 
 function Dashboard() {
-  const[counter,setCounter]=useState(10);
-  const[pointer,setPointer]=useState(0);
+  const[data,setData]=useState([]);
+  const[cart,setCart]=useState([]);
 
   useEffect(()=>{
-    console.log(counter)
-    console.log(pointer)
-  },[counter])
+
+         async function fetchData(){
+                  const serverResponse= await fetch('https://fakestoreapi.com/products');
+                    const jsondata=await serverResponse.json();
+                    setData(jsondata);
+                  console.log(jsondata);
+         }
+
+        fetchData();
+  },[])
+
+  function addToCart(ele){
+    // alert(ele.title);
+    setCart(data=>[...data,ele])
+    // alert(cart.length);
+  }
+
   return (
     <div>
-    <div>
-      <h2>Counter value={counter}</h2>
-      <h2>Counter value={pointer}</h2>
-    </div>
-      <button onClick={()=>setCounter(counter+10)}>Counter</button>
-      <button onClick={()=>setPointer(pointer+20)}>Pointer</button>
+    {
+      data.length===0?(<h2>Product is not available at this time</h2>)
+      :(<h2>
+        {
+        data.map((ele)=>(
+            <div style={{height:'400px', width:'400px'}}>
+              <img src={ele.image} height={100} width={100}></img>
+             <h4>{ele.title}</h4>
+             <h4>'$'{ele.price}</h4>
+             <h5>{ele.description}</h5>
+             <h4>{ele.category}</h4>
+             <button onClick={()=>addToCart(ele)}>Add to Cart</button>
+            </div>
+            
+        ))
+        }
+
+      </h2>)
+    }
+
+   {/* {
+    JSON.stringify(data)
+   }
+       */}
     </div>
   )
 }
